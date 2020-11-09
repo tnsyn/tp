@@ -354,6 +354,7 @@ Example:
 * `role-edit 1 burger flipper` Edits the 1st role to be burger flipper.
     * Output: `Edited role: Burger flipper | Previous role: Chef`
 
+<div style="page-break-after: always;"></div>
 
 #### Deleting a role: `role-delete`
 
@@ -436,6 +437,8 @@ Examples:
     * Output: `2 shift assignment(s) removed:`<br>
               `Shift: FRI PM - Worker: Charlotte Oliveiro (Role: Chef)`<br>
               `Shift: FRI PM - Worker: Alex Yeoh (Role: Cashier)`
+
+<div style="page-break-after: always;"></div>
 
 #### Reassigning an existing assignment: `reassign`
 
@@ -636,6 +639,11 @@ Worker | **List** | `worker-list`
 Worker | **Find** | `worker-find KEYWORD...`<br>e.g. `worker-find alex david`
 Worker | **Pay** | `worker-pay WORKER_INDEX`<br>e.g. `worker-pay 1`
 Shift | **Add** | `shift-add d/DAY t/TIME [r/ROLE NUMBER_NEEDED]...`<br>e.g. `shift-add d/Wed t/AM r/Cashier 2 r/Janitor 3`
+
+<div style="page-break-after: always;"></div>
+
+Data | Action | Format, Example
+-----|--------|------------------
 Shift | **Delete** | `shift-delete SHIFT_INDEX`<br>e.g. `shift-delete 2`
 Shift | **Edit** | `shift-edit SHIFT_INDEX [d/DAY] [t/TIME] [r/ROLE NUMBER_NEEDED]...`<br>e.g. `shift-edit 1 d/Mon t/PM r/Janitor 1`
 Shift | **List** | `shift-list`
@@ -647,6 +655,11 @@ Assignment | **Show Available Workers** | `worker-avail SHIFT_INDEX r/ROLE`<br>e
 Assignment | **Assign** | `assign s/SHIFT_INDEX {w/WORKER_INDEX ROLE}...`<br>e.g. `assign s/3 w/2 Cashier w/3 Chef`
 Assignment | **Unassign** | `unassign s/SHIFT_INDEX w/WORKER_INDEX...`<br>e.g. `unassign s/4 w/1 w/5`
 Assignment | **Reassign** | `reassign so/OLD_SHIFT_INDEX wo/OLD_WORKER_INDEX sn/NEW_SHIFT_INDEX wn/NEW_WORKER_INDEX r/NEW_ROLE`<br>e.g. `reassign so/4 wo/1 sn/1 wn/1 r/Chef`<br>`reassign s/SHIFT_INDEX w/WORKER_INDEX r/NEW_ROLE` <br>e.g. `reassign s/1 w/1 r/Cashier`
+
+<div style="page-break-after: always;"></div>
+
+Data | Action | Format, Example
+-----|--------|------------------
 Leave | **Take** | `take-leave s/SHIFT_INDEX w/WORKER_INDEX...`<br>e.g. `take-leave s/2 w/1 w/4`
 Leave | **Take over range of dates** | `mass-take-leave w/WORKER_INDEX d/START_DAY t/START_TIME d/END_DAY t/END_TIME`<br>e.g. `mass-take-leave w/2 d/Sat t/AM d/Tue t/PM`
 Leave | **Cancel** | `cancel-leave s/SHIFT_INDEX w/WORKER_INDEX...`<br>e.g.`cancel-leave s/3 w/2 w/3`
